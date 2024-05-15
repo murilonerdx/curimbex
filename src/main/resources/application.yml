@@ -1,0 +1,10 @@
+spring:
+  application:
+    name:
+      curimbex
+springdoc:
+  packagesToScan: com.murilonerdx.curimbex.controller
+  swagger-ui:
+    path: /docs-curimbex.html
+  api-docs:
+    path: /docs-curimbex
