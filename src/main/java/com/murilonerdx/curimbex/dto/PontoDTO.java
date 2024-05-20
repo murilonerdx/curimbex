@@ -1,5 +1,6 @@
 package com.murilonerdx.curimbex.dto;
 
+import com.murilonerdx.curimbex.model.Ponto;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,4 +19,15 @@ public class PontoDTO {
 	private String toque;
 	@NotEmpty(message = "Esse campo não pode ser vazio")
 	private String createBy;
+
+	public Ponto toModel(Long id){
+		return new Ponto(
+				id,
+				this.nomeDoPonto,
+				this.toque,
+				this.letra,
+				this.createBy,
+				null
+		);
+	}
 }
